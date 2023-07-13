@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#3F51B5"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/blue_bg_2"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -16,72 +16,76 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/logo"
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="34sp" />
+            app:srcCompat="@drawable/usm_planner_logo_2" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
-
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_horario_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#FFC107"
-            android:drawableTop="@mipmap/schedule"
+            android:background="@drawable/btn_horario"
+            android:drawableTop="@mipmap/schedule_alt"
             android:text="@string/btn_main_horario"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            app:cornerRadius="8dp"
-            app:strokeColor="#000000"
-            app:strokeWidth="5dp" />
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_main_notas"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FFC107"
+                android:background="@drawable/btn_notas"
+                android:drawableTop="@mipmap/grades_alt"
                 android:insetLeft="4dp"
                 android:insetRight="4dp"
                 android:text="@string/btn_main_notas"
                 android:textAlignment="center"
-                android:textColor="#000000"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
                 app:icon="@mipmap/grades"
                 app:iconPadding="0dp"
-                app:iconTint="#000000"
-                app:strokeWidth="5dp" />
+                app:iconSize="25dp"
+                app:iconTint="@color/white"
+                app:strokeWidth="0dp" />
 
-            <Button
+            <Space
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_main_map"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#FFC107"
+                android:background="@drawable/btn_map"
+                android:drawableTop="@android:drawable/ic_dialog_map"
                 android:insetLeft="4dp"
                 android:insetRight="4dp"
                 android:text="@string/btn_main_mapa"
-                android:textColor="#000000"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:cornerRadius="8dp"
                 app:icon="@android:drawable/ic_dialog_map"
                 app:iconPadding="0dp"
-                app:iconTint="#000000"
-                app:strokeWidth="5dp" />
+                app:iconSize="25dp"
+                app:iconTint="@color/white" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

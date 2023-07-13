@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/blue_bg_2"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/usm_planner_logo_2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_horario_main"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_horario"
+                android:drawableTop="@mipmap/schedule_alt"
+                android:text="@string/btn_main_horario"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:cornerRadius="8dp"
+                app:strokeColor="#000000"
+                app:strokeWidth="5dp" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_main_notas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_notas"
+                    android:drawableLeft="@mipmap/grades_alt"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:text="@string/btn_main_notas"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="8dp"
+                    app:icon="@mipmap/grades"
+                    app:iconPadding="0dp"
+                    app:iconSize="25dp"
+                    app:iconTint="#000000"
+                    app:strokeWidth="5dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_main_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_map"
+                    android:drawableLeft="@android:drawable/ic_dialog_map"
+                    android:text="@string/btn_main_mapa"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:cornerRadius="8dp"
+                    app:icon="@android:drawable/ic_dialog_map"
+                    app:iconPadding="0dp"
+                    app:iconSize="25dp"
+                    app:iconTint="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

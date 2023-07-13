@@ -9,13 +9,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    TextView logo;
     Button btn_horario, btn_notas, btn_map;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        logo = findViewById(R.id.logo);
         btn_horario = findViewById(R.id.btn_horario_main);
         btn_map = findViewById(R.id.btn_main_notas);
         btn_notas = findViewById(R.id.btn_main_map);
