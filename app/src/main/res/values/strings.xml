@@ -3,4 +3,10 @@
     <string name="btn_main_horario">Horario</string>
     <string name="btn_main_notas">Notas</string>
     <string name="btn_main_mapa">Mapa</string>
+    <string name="text_lunes">Lunes</string>
+    <string name="text_martes">Martes</string>
+    <string name="text_miercoles">Miércoles</string>
+    <string name="text_jueves">Jueves</string>
+    <string name="text_viernes">Viernes</string>
+    <string name="text_blocks">Bloques</string>
 </resources>
