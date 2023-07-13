@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFC107"
+            android:drawableTop="@mipmap/schedule"
+            android:text="@string/btn_main_horario"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:cornerRadius="8dp"
+            app:strokeColor="#000000"
+            app:strokeWidth="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_main_notas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FFC107"
+                android:insetLeft="4dp"
+                android:insetRight="4dp"
+                android:text="@string/btn_main_notas"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                app:icon="@mipmap/grades"
+                app:iconPadding="0dp"
+                app:iconTint="#000000"
+                app:strokeWidth="5dp" />
+
+            <Button
+                android:id="@+id/btn_main_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FFC107"
+                android:insetLeft="4dp"
+                android:insetRight="4dp"
+                android:text="@string/btn_main_mapa"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:cornerRadius="8dp"
+                app:icon="@android:drawable/ic_dialog_map"
+                app:iconPadding="0dp"
+                app:iconTint="#000000"
+                app:strokeWidth="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

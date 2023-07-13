@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">USM_Planner</string>
+    <string name="btn_main_horario">Horario</string>
+    <string name="btn_main_notas">Notas</string>
+    <string name="btn_main_mapa">Mapa</string>
+</resources>
