@@ -40,7 +40,7 @@ public class TablaDinamica {
         texto_celda.setTextSize(25);
     }
 
-    private void createHeader(){
+    public void createHeader(){
         int columnas = 0;
         newRow();
         while (columnas < header.length){
@@ -52,7 +52,7 @@ public class TablaDinamica {
         tableLayout.addView(tableRow);
     }
 
-    private void CreateDataTable(){
+    public void CreateDataTable(){
         String info;
         for (int filas = 1; filas <= header.length; filas++){
             newRow();

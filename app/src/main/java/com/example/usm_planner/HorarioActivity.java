@@ -22,17 +22,23 @@ public class HorarioActivity extends AppCompatActivity {
         // Definición de la tabla dinámica
         TablaDinamica tabla = new TablaDinamica(tableLayout, getApplicationContext());
         tabla.addHeader(head);
+        tabla.createHeader();
         ArrayList<String[]> rows = CreateRows();
         tabla.addData(rows);
+        tabla.CreateDataTable();
         System.out.println("Awa");
     }
     private ArrayList<String[]> CreateRows(){
         String bloque;
+        String[] fila;
         ArrayList<String[]> rows = new ArrayList<>();
         for (int i = 0; i < bloques.length; i++){
             bloque = bloques[i] + "\n" + horas[i];
-            rows.add(new String[]{bloque,"","","","",""});
+            fila = new String[]{bloque,"","","","",""};
+            rows.add(fila);
+            //System.out.println(fila);
         }
+
         return rows;
     }
 }
