@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="naranjoSiga">#ff9c00</color>
+    <color name="azulAula">#005e90</color>
+    <color name="rojoImportante">#F52E0B</color>
+    <color name="verdeAceptar">#28B463</color>
 </resources>
