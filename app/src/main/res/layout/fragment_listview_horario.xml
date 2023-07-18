@@ -14,7 +14,6 @@
         android:dividerHeight="10dp"
         android:scrollbarAlwaysDrawVerticalTrack="false"
         android:scrollbarStyle="outsideOverlay"
-        android:scrollbars="vertical"
-        tools:listitem="@layout/listview_horario" />
+        android:scrollbars="vertical" />
 
 </FrameLayout>

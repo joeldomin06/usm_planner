@@ -17,12 +17,7 @@ interface Listener{
     void itemClicked(int id);
 }
 public class ListviewHorario extends ListFragment {
-    public String[] list = {"Android","IPhone","WindowsMobile","Blackberry",
-            "WebOS","Ubuntu","Windows7","Max OS X","Android","IPhone","WindowsMobile","Blackberry",
-            "WebOS","Ubuntu","Windows7","Max OS X","Android","IPhone","WindowsMobile","Blackberry",
-            "WebOS","Ubuntu","Windows7","Max OS X","Android","IPhone","WindowsMobile","Blackberry",
-            "WebOS","Ubuntu","Windows7","Max OS X","Android","IPhone","WindowsMobile","Blackberry",
-            "WebOS","Ubuntu","Windows7","Max OS X"};
+    public String[] list = {};
     private Listener listener;
     @Override
     public void onAttach(Context context) {
@@ -31,7 +26,11 @@ public class ListviewHorario extends ListFragment {
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        setListAdapter(new ArrayAdapter<String>(inflater.getContext(),R.layout.listview_horario,list));
+        if(list.length > 0){
+            setListAdapter(new ArrayAdapter<String>(inflater.getContext(),R.layout.listview_horario,list));
+        }else {
+            setListAdapter(new ArrayAdapter<String>(inflater.getContext(),R.layout.listview_empty_horario,new String[]{"No se han encontrado elementos"}));
+        }
         return inflater.inflate(R.layout.fragment_listview_horario,container,false);
     }
 
