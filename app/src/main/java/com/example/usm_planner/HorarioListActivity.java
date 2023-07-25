@@ -11,6 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
 public class HorarioListActivity extends AppCompatActivity implements Listener{
     private void showBottomDialog(){
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
@@ -19,12 +23,23 @@ public class HorarioListActivity extends AppCompatActivity implements Listener{
         Button btn_save = (Button) bottomSheetDialog.findViewById(R.id.btn_save);
         EditText text_input = (EditText) bottomSheetDialog.findViewById(R.id.inputtext_add);
         btn_close.setOnClickListener(view -> bottomSheetDialog.dismiss());
-        btn_save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), text_input.getText(), Toast.LENGTH_LONG).show();
-                bottomSheetDialog.dismiss();
+        btn_save.setOnClickListener(view -> {
+            Toast.makeText(getApplicationContext(), text_input.getText(), Toast.LENGTH_LONG).show();
+            String Txt = text_input.getText().toString();
+            Horario hor = new Horario(Txt);
+            String archName = Txt+".tpo";
+            File f = new File(getApplicationContext().getFilesDir(),archName);
+            try {
+                FileOutputStream fileOutputStream = new FileOutputStream(f);
+                ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+                objectOutputStream.writeObject(hor);
+                objectOutputStream.close();
+            } catch (Exception e){
+                e.printStackTrace();
             }
+            bottomSheetDialog.dismiss();
+            finish();
+            startActivity(getIntent());
         });
         bottomSheetDialog.show();
     }
@@ -36,9 +51,9 @@ public class HorarioListActivity extends AppCompatActivity implements Listener{
         btn_add.setOnClickListener(view -> showBottomDialog());
     }
     @Override
-    public void itemClicked(int id) {
+    public void itemClicked(String nombre) {
         Intent intent = new Intent(this, HorarioActivity.class);
-        intent.putExtra("Horario_id",id);
+        intent.putExtra("Horario_nombre",nombre);
         startActivity(intent);
     }
 }
